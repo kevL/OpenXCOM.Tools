@@ -266,8 +266,9 @@ namespace XCom
 		/// </summary>
 		/// <param name="bytesTab">a little-endian array of bytes</param>
 		/// <param name="tabwordLength">pointer to hold the TabwordLength</param>
-		/// <returns>true if the <c>Length</c> of <paramref name="bytesTab"/> is
-		/// factorable by the estimated TabwordLength</returns>
+		/// <returns><c>true</c> if the <c>Length</c> of
+		/// <paramref name="bytesTab"/> is factorable by the estimated
+		/// TabwordLength</returns>
 		/// <remarks>The Tabfile uses little-endian words. If an array of bytes
 		/// has more than 2 bytes and the values of the 3rd and 4th bytes is
 		/// <c>0</c> the TabwordLength is <c><see cref="TAB_WORD_LENGTH_4"/></c>
@@ -276,8 +277,7 @@ namespace XCom
 		/// <c><see cref="TAB_WORD_LENGTH_2"/></c>. The first sprite in the
 		/// corresponding Pckfile always has an offset of <c>0</c> - but the
 		/// second sprite if it exists always has a nonzero offset.
-		/// 
-		/// 
+		/// <br/><br/>
 		/// Eg. first four bytes
 		/// <code>
 		/// TAB_WORD_LENGTH_2 : 00 00 01 00
@@ -286,8 +286,8 @@ namespace XCom
 		/// </remarks>
 		private static bool GetTabwordLength(byte[] bytesTab, out int tabwordLength)
 		{
-			if (bytesTab.Length != 3)	// return TAB_WORD_LENGTH_0 'unknown' since it takes 4 bytes to make
-			{							// a decent guesstimation (unless the length is exactly 2 bytes)
+			if (bytesTab.Length != 3)
+			{
 				if (bytesTab.Length >= TAB_WORD_LENGTH_4
 					&& bytesTab[2] == (byte)0
 					&& bytesTab[3] == (byte)0)
