@@ -643,7 +643,7 @@ namespace MapView
 		/// embedded MapViewers manifest to a file: "settings/MapViewers.yml".
 		/// </summary>
 		/// <param name="fullpath"></param>
-		/// <returns>true on success</returns>
+		/// <returns><c>true</c> on success</returns>
 		private static bool CopyViewersFile(string fullpath)
 		{
 			using (var fs = FileService.CreateFile(fullpath))

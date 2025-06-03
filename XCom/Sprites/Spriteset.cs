@@ -197,7 +197,7 @@ namespace XCom
 				int tabwordLength = SpritesetManager.TAB_WORD_LENGTH_2)
 		{
 			Label = label;
-			Pal   = pal;
+			Pal = pal;
 
 			SpriteWidth  = spritewidth;
 			SpriteHeight = spriteheight;
